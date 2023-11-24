@@ -31,12 +31,15 @@ public class SecurityConfig {
                                                 "/scripts/**").permitAll()
                                         .anyRequest()
                                         .authenticated()
+
+
                 ).formLogin(
                         login ->
                                 login.loginPage("/auth/login")
                                         .defaultSuccessUrl("/auth/login-success")
                                         .usernameParameter("nomusuario")
                                         .passwordParameter("password")
+
                 ).logout(
                         logout ->
                                 logout.logoutSuccessUrl("/auth/login")

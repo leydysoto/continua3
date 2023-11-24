@@ -47,6 +47,10 @@ public class Login {
         session.setAttribute("usuario", usuarioSecurity.getUsername());
         return "frontoffice/principal";
     }
+    @GetMapping("/cambiarContrasenia")
+    public String mostrarFormulario() {
+        return "frontoffice/cambiarPassword";
+    }
 
 
 
